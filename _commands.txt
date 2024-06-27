@@ -1,0 +1,15 @@
+# Pull material-mkdocs Docker image
+docker pull squidfunk/mkdocs-material
+
+# Setup the website
+docker run --rm -it -v "${PWD}:/docs" squidfunk/mkdocs-material new .
+
+# Serve preview site
+docker run --rm -it -p 8000:8000 -v "${PWD}:/docs" squidfunk/mkdocs-material
+
+(local) WE NEED 0.0.0.0 OR MKDOCS DOES NOT RUN
+docker build -t teonikolov/website-mkdocs -f Dockerfile .
+docker run --rm -it -p 8000:8000 -v "${PWD}:/docs" teonikolov/website-mkdocs
+
+# Build the site
+docker run --rm -it -v "${PWD}:/docs" squidfunk/mkdocs-material build

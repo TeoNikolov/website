@@ -1,0 +1,22 @@
+site_name: Teodor Nikolov
+theme:
+  name: material
+  palette:
+    primary: custom
+  features:
+    - navigation.footer
+extra_css:
+  - stylesheets/extra.css
+plugins:
+  - search
+  - awesome-pages
+  - mkdocs-video
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - toc:
+        permalink: "🔗&#xFE0E;"
+        toc_depth: 3
