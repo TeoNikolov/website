@@ -2,6 +2,7 @@ site_name: Teodor Nikolov
 theme:
   name: material
   palette:
+    scheme: slate
     primary: custom
   features:
     - navigation.footer
