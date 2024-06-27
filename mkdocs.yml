@@ -6,6 +6,7 @@ theme:
     primary: custom
   features:
     - navigation.footer
+    - navigation.tabs
 extra_css:
   - stylesheets/extra.css
 plugins:
