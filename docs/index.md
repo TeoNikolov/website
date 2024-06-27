@@ -5,5 +5,6 @@
 This site is a work-in-progress.
 
 Contact:
-- Email: tnikolov@hotmail.com
-- Linkedin: https://www.linkedin.com/in/teodor-nikolov/
+
+- Email: [tnikolov@hotmail.com](mailto:tnikolov@hotmail.com)
+- Linkedin: [https://www.linkedin.com/in/teodor-nikolov/](https://www.linkedin.com/in/teodor-nikolov/)
