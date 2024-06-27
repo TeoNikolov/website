@@ -1,4 +1,10 @@
 site_name: Teodor Nikolov
+
+# Repository
+repo_name: teonikolov/website
+repo_url: https://github.com/teonikolov/website
+edit_uri: ""
+
 theme:
   name: material
   palette:
