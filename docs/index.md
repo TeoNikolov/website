@@ -2,8 +2,8 @@
 
 ![](assets/gifs/hello-there.gif)
 
->>> [tnikolov@hotmail.com](mailto:tnikolov@hotmail.com)
 >>> [LinkedIn](https://www.linkedin.com/in/teodor-nikolov/)
+>>> [tnikolov@hotmail.com](mailto:tnikolov@hotmail.com)
 
 ---
 
