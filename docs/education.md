@@ -1,15 +1,17 @@
 # Education
 
-This website is work-in-progress.
+## MSc Game and Media Technology
+
+> **Sep 2018 - May 2022**
+> 
+> Utrecht University, Utrecht, Netherlands
+
+**Master's Thesis**: Generating finger animation for gesturing avatars from speech audio and text
 
 ## BSc Computer Science
-*Cardiff University, Cardiff, United Kingdom*
 
-### Bachelor's Project
-*Title: Real-time procedural generation of voxel terrain*
+> **Sep 2015 - Jul 2018**
+> 
+> Cardiff University, Cardiff, United Kingdom
 
-## MSc Game and Media Technology
-*Utrecht University, Utrecht, Netherlands*
-
-### Master's Thesis
-*Title: Generating Finger Animation for Gesturing Avatars from Speech Audio and Text*
+**Bachelor's Thesis**: Real-time procedural generation of voxel terrain

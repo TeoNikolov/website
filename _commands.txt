@@ -8,7 +8,7 @@ docker run --rm -it -v "${PWD}:/docs" squidfunk/mkdocs-material new .
 docker run --rm -it -p 8000:8000 -v "${PWD}:/docs" squidfunk/mkdocs-material
 
 (local) WE NEED 0.0.0.0 OR MKDOCS DOES NOT RUN
-docker build -t teonikolov/website-mkdocs -f Dockerfile .
+docker build --no-cache -t teonikolov/website-mkdocs -f Dockerfile .
 docker run --rm -it -p 8000:8000 -v "${PWD}:/docs" teonikolov/website-mkdocs
 
 # Build the site

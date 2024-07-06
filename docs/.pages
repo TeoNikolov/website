@@ -1,5 +1,6 @@
 nav:
     - About: index.md
+    - Projects: projects.md
     - Experience: experience.md
     - Education: education.md
     - Skills: skills.md
