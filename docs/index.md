@@ -4,11 +4,13 @@
 
 I am Teodor, a software engineer.
 
-<div class="grid cards" markdown>
+# Contact
 
-- [:simple-linkedin: LinkedIn](https://www.linkedin.com/in/teodor-nikolov/)
-- [:simple-github: GitHub](https://www.linkedin.com/in/teodor-nikolov/)
-- [:material-email: tnikolov@hotmail.com](mailto:tnikolov@hotmail.com)
+<div id="compact-cards" class="grid cards" markdown>
+
+- <a href="mailto:tnikolov@hotmail.com" class="md-button md-button--primary" style="display: block; text-align: center;">:material-email: Email</a>
+- <a href="https://www.linkedin.com/in/teodor-nikolov/" id="button-linkedin" class="md-button md-button--primary" style="display: block; text-align: center;">:simple-linkedin: LinkedIn</a>
+- <a href="https://github.com/TeoNikolov" id="button-github" class="md-button md-button--primary" style="display: block; text-align: center;">:simple-github: GitHub</a>
 
 </div>
 

@@ -2,4 +2,41 @@
   --md-primary-fg-color:        #4f1fd4;
   --md-primary-fg-color--light: #3417c4;
   --md-primary-fg-color--dark:  #0b0c42;
+  --md-default-bg-color: #EEEEEE;
+}
+
+#button-linkedin
+{
+  border-color: #0077B5;
+  background-color: #0077B5;
+}
+
+#button-linkedin:hover
+{
+  border-color: #005582;
+  background-color: #005582;
+}
+
+#button-github
+{
+  border-color: #080808;
+  background-color: #080808;
+}
+
+#button-github:hover
+{
+  border-color: #111111;
+  background-color: #111111;
+}
+
+#compact-cards
+{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#compact-cards > ul > li
+{
+  padding: 0;
+  margin: 4px;
+  border-color: transparent;
 }
