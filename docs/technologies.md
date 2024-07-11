@@ -32,10 +32,11 @@ A set of technologies that I have worked with (in no particular order):
 
     ---
 
-    - CUDA (GPGPU)
+    - Machine Learning Theory
     - Tensorflow
-    - Numpy
+    - CUDA (GPGPU)
     - Pandas
+    - Numpy
     - RudderStack
     - Mixpanel
 
