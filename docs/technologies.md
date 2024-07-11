@@ -26,12 +26,13 @@ A set of technologies that I have worked with (in no particular order):
     - Autodesk MotionBuilder
     - Blender
     - Motion capture (Vicon)
-    - GPGPU (CUDA)
+    - OpenGL
 
 - **AI & Data Science**
 
     ---
 
+    - CUDA (GPGPU)
     - Tensorflow
     - Numpy
     - Pandas
@@ -45,6 +46,7 @@ A set of technologies that I have worked with (in no particular order):
     - GitHub
     - Docker
     - Cloudflare
+    - DNS
     - SSH
     - REST (HTTP)
     - HTML, CSS, Javascript
