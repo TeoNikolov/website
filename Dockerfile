@@ -1,9 +1,10 @@
 FROM squidfunk/mkdocs-material
 
 RUN pip install --no-cache-dir \
+	mkdocs-material==9.5.29 \
+	mkdocs-material[imaging]==9.5.29 \
 	mkdocs-awesome-pages-plugin==2.9.2 \
-	mkdocs-video mkdocs-redirects==1.2.1 \
-	mkdocs-material==9.5.17 \
+	mkdocs-redirects==1.2.1 \
 	mkdocs-video==1.5.0
 
 ENTRYPOINT ["mkdocs"]
