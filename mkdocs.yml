@@ -29,6 +29,7 @@ plugins:
   - search
   - awesome-pages
   - mkdocs-video
+  - social
 markdown_extensions:
   - admonition
   - pymdownx.details
