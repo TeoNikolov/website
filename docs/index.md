@@ -2,7 +2,25 @@
 
 ![](assets/gifs/hello-there.gif)
 
-I am Teodor, a software engineer.
+I am Teodor, a software engineer with a blend of technical expertise and creative passion. My fascination with both science and art drives my involvement in a spectrum of IT subfields, including machine learning, 3D animation, and game development. My strong focus on software development and DevOps brings projects to life, while my diverse interests and eye for detail ensure informed and high-quality results. I also play video games :video_game:.
+
+# Interests
+
+My interests include, yet are not limited to:
+- Software development
+- Cloud development
+- DevOps
+- Security
+- 3D animation & motion capture
+- 3D rendering
+- Virtual reality
+- Game development
+- Video games (Factorio !!!)
+- Machine learning / AI
+- High-performance computing / optimization
+- Drawing
+- Music production
+- Natural sciences
 
 # Contact
 
