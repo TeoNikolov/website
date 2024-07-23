@@ -1,6 +1,6 @@
 # Technologies
 
-A set of technologies that I have worked with (in no particular order):
+Technologies I have worked with:
 
 <div class="grid cards" markdown>
 
