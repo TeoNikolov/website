@@ -1,7 +1,5 @@
 # Technologies
 
-Technologies I have worked with:
-
 <div class="grid cards" markdown>
 
 - **Software Development**
