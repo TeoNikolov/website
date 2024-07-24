@@ -2,7 +2,7 @@
 
 ![](assets/gifs/hello-there.gif)
 
-I am Teodor, a software engineer with a blend of technical expertise and creative passion, working at [Motorica AI](https://www.motorica.ai). My fascination with both science and art drives my involvement in a spectrum of IT subfields, including machine learning, 3D animation, and game development. My strong focus on software development and DevOps brings projects to life, while my diverse interests and eye for detail ensure informed and high-quality results. I also play video games :space_invader:.
+I am Teodor Nikolov, a software engineer working at [Motorica AI](https://www.motorica.ai). My blend of technical expertise and creative passion drives my involvement in a spectrum of IT subfields, including machine learning, 3D animation, and game development. My strong focus on software development and DevOps brings projects to life, while my diverse interests and eye for detail ensure informed and high-quality results. I also play video games :space_invader:.
 
 # Interests
 
