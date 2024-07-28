@@ -1,4 +1,4 @@
-# About Me
+# About
 
 ![](assets/gifs/hello-there.gif)
 
