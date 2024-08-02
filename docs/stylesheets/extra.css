@@ -35,8 +35,9 @@
     repeat(
       auto-fit,
       minmax(
-        min(100%, #{px2rem(192px)}),
+        min(100%, 4rem),
         1fr
+      )
     );
 }
 
@@ -45,4 +46,9 @@
   padding: 0;
   margin: 4px;
   border-color: transparent;
+}
+
+#compact-cards > * a
+{
+  padding: 8px;
 }
