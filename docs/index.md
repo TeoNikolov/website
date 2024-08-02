@@ -15,3 +15,5 @@ I also play video games :space_invader:.
 - <a href="https://github.com/TeoNikolov" id="button-github" class="md-button md-button--primary" style="display: block; text-align: center;">:simple-github: GitHub</a>
 
 </div>
+
+email: [tnikolov@hotmail.com](mailto:tnikolov@hotmail.com)
