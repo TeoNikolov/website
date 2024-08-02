@@ -35,7 +35,7 @@
     repeat(
       auto-fit,
       minmax(
-        min(100%, #{px2rem(256px)}),
+        min(100%, #{px2rem(192px)}),
         1fr
     );
 }
