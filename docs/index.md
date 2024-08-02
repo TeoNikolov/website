@@ -4,7 +4,7 @@
 
 My name is **Teodor Nikolov**. I'm a generalist programmer currently working at [Motorica AI](https://www.motorica.ai) as Research Engineer.
 
-I'm a technical yet creative thinker with many interests in all things science and engineering. To keep things short, my primary focus areas are software engineering, DevOps, machine learning, 3D animation, and game development.
+I'm a technical yet creative thinker with many interests in all things science and engineering. To keep it short, my focus areas are software engineering, DevOps, machine learning, 3D animation, and game development.
 
 I also play video games :space_invader:.
 
@@ -16,4 +16,4 @@ I also play video games :space_invader:.
 
 </div>
 
-email: [tnikolov@hotmail.com](mailto:tnikolov@hotmail.com)
+[tnikolov@hotmail.com](mailto:tnikolov@hotmail.com)
