@@ -71,27 +71,27 @@ def define_env(env):
         if 'banner' in page:
             banner = "/assets/" + page['banner']
 
-        # Process banner
-        if banner:
-            banner_width = 800
-            banner_height = 200
-            banner_img = load_banner("docs" + banner, banner_width, banner_height)
+        # # Process banner
+        # if banner:
+        #     banner_width = 800
+        #     banner_height = 200
+        #     banner_img = load_banner("docs" + banner, banner_width, banner_height)
 
-            if banner_img:
-                banner_dir = os.path.dirname(banner)
-                banner_dir_new = banner_dir + "/banners"
-                banner_filename = os.path.basename(banner)
-                banner_filename_base, banner_filename_extension = os.path.splitext(banner_filename)
-                banner_filename_new = banner_dir_new + "/" + banner_filename_base + "_banner.png"
+        #     if banner_img:
+        #         banner_dir = os.path.dirname(banner)
+        #         banner_dir_new = banner_dir + "/banners"
+        #         banner_filename = os.path.basename(banner)
+        #         banner_filename_base, banner_filename_extension = os.path.splitext(banner_filename)
+        #         banner_filename_new = banner_dir_new + "/" + banner_filename_base + "_banner.png"
 
-                if banner_dir_new and not os.path.exists(banner_dir_new):
-                    os.makedirs(banner_dir_new)
+        #         if banner_dir_new and not os.path.exists(banner_dir_new):
+        #             os.makedirs(banner_dir_new)
                 
-                ### This saves to the docs, we want a temporary file instead like social cards!!! Fix this some day if we nee this functionality
-                # banner_img.save(banner_filename_new)
+        #         ### This saves to the docs, we want a temporary file instead like social cards!!! Fix this some day if we nee this functionality
+        #         # banner_img.save(banner_filename_new)
 
-                # Update original variable with new image
-                # banner = "/" + banner_filename_new
+        #         # Update original variable with new image
+        #         # banner = "/" + banner_filename_new
 
         # Text blocks
 
