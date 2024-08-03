@@ -52,3 +52,16 @@
 {
   padding: 8px;
 }
+
+.card_banner
+{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 8rem;
+}
+
+.card_banner > img
+{
+  width: 100%;
+}
