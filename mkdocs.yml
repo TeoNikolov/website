@@ -31,6 +31,7 @@ plugins:
   - awesome-pages
   - mkdocs-video
   - social
+  - macros
 markdown_extensions:
   - admonition
   - pymdownx.details
