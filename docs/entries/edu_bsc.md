@@ -1,4 +1,5 @@
 ---
+type: "education"
 name: "BSc Computer Science"
 banner: "images/logo_cardiff-university.jpeg"
 start_month: 9

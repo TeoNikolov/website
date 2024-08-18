@@ -1,4 +1,5 @@
 ---
+type: "education"
 name: "MSc Game and Media Technology"
 banner: "images/logo_utrecht-university.jpeg"
 start_month: 9

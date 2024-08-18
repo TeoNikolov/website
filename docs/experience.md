@@ -2,6 +2,13 @@
 
 This site is a work-in-progress.
 
+<div class="grid cards" markdown>
+
+{{ grid_entry("docs/entries/exp_motorica.md") }}
+{{ grid_entry("docs/entries/exp_freelance.md") }}
+
+</div>
+
 ## Motorica AB
 04-2024 - Ongoing | Research Engineer
 

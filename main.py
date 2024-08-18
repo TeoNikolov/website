@@ -2,6 +2,49 @@ import frontmatter
 import calendar
 from PIL import Image
 import os
+from typing import List, Dict, Optional, Any
+
+class FrontmatterParser:
+    def __init__(self, name: str, required_args: List[str], optional_args: Optional[List[str]] = None):
+        if not isinstance(required_args, list) or not all(isinstance(arg, str) for arg in required_args):
+            raise ValueError("required_args must be a list of strings")
+        if not isinstance(name, str):
+            raise ValueError("name must be a string")
+        if optional_args and (not isinstance(optional_args, list) or not all(isinstance(arg, str) for arg in optional_args)):
+            raise ValueError("optional_args must be a list of strings")
+        
+        self.required_args: Dict[str, Optional[Any]] = {arg: None for arg in required_args}
+        self.optional_args: Dict[str, Optional[Any]] = {arg: None for arg in optional_args} if optional_args else {}
+        self.name: str = name
+
+    def parse(self, data):
+        for arg in self.required_args:
+            if arg not in data:
+                raise ValueError(f"Missing required argument: {arg}")
+            self.required_args[arg] = data[arg]
+        
+        for arg in self.optional_args:
+            if arg in data:
+                self.optional_args[arg] = data[arg]
+
+parsers = {
+    "experience" : FrontmatterParser(
+        name="experience",
+        required_args=["name"],
+        optional_args=["start_year"]
+    ),
+    "education" : FrontmatterParser(
+        name="education",
+        required_args=["name"],
+        optional_args=["start_year"]
+    ),
+    "project" : FrontmatterParser(
+        name="project",
+        required_args=["name"],
+        optional_args=["start_year"]
+    )
+}
+
 
 def define_env(env):
     
@@ -40,7 +83,17 @@ def define_env(env):
     @env.macro
     def grid_entry(path):
         page = frontmatter.load(path)
-        
+
+        # Frontmatter Parser
+
+        if 'type' not in page:
+            raise KeyError(f"Missing \"type\" in frontmatter of \"{path}\"")
+
+        if page['type'] not in parsers:
+            raise ValueError(f"No parser available for type \"{page['type']}\" in frontmatter of \"{path}\"")
+
+        parser = parsers[page['type']]
+
         # Variables
 
         if 'name' not in page:
@@ -95,10 +148,16 @@ def define_env(env):
 
         # Text blocks
 
+        end_date_str = ""
+        if end_month == 0 or end_year == 0:
+            end_date_str = "Ongoing"
+        else:
+            end_date_str = f"{end_month} {end_year}"
+
         header_str = '\n'.join([
             f"\t**{name}**",
             f"\t",
-            f"\t> {start_month} {start_year} - {end_month} {end_year}",
+            f"\t> {start_month} {start_year} - {end_date_str}",
         ])
 
         project_str = ""
