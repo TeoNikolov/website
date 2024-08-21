@@ -12,4 +12,5 @@ class CardData:
             return self.required_args[key]
         elif key in self.optional_args:
             return self.optional_args[key]
+        print(f"[WARNING] - Failed to get parsed value for \"{key}\"")
         return None

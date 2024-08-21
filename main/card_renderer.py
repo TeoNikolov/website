@@ -13,19 +13,11 @@ class CardRenderer:
 
     def _convert_to_join_format(self, template_string: str) -> str:
         lines = [line for line in template_string.splitlines()]
-        for l in lines:
-            print(repr(l))
         lines_joined = '\n'.join(lines)
         return lines_joined
 
     def _render_template(self, **kwargs) -> str:
-        print(repr(self.TEMPLATE))
-        print()
         template = Template(self._convert_to_join_format(self.TEMPLATE))
-        print()
-        print(repr(template))
-        print()
-        print()
         return template.safe_substitute(**kwargs)
 
 # Used to display a card that shows an error
@@ -38,12 +30,18 @@ class EducationCardRenderer(CardRenderer):
 - ${image_html}
 \t
 \t **${degree}**
-\t <p>${start_month} ${start_year} - ${end_date_str}</p>
+\t
+\t > ${start_month} ${start_year} - ${end_date_str}
+\t >
+\t > ${organization} @ ${location}
+\t
 \t ${project_html}
 \n"""
 
     def render(self, card_data: CardData) -> str:
         degree = card_data.get_value("degree")
+        organization = card_data.get_value("organization")
+        location = card_data.get_value("location")
         start_month = calendar.month_abbr[int(card_data.get_value("start_month"))]
         start_year = card_data.get_value("start_year")
         end_month = calendar.month_abbr[int(card_data.get_value("end_month"))]
@@ -58,10 +56,15 @@ class EducationCardRenderer(CardRenderer):
     <img src="{image}" alt="This is an automatically generated image.">
 </span>""" if image else ""
 
-        project_html = f"<p><strong>Project:</strong> {project}</p>" if project else ""
+
+        project_html = f"""\
+---
+<strong>Project:</strong> {project}""" if project else ""
 
         result = self._render_template(
             degree=degree,
+            organization=organization,
+            location=location,
             start_month=start_month,
             start_year=start_year,
             end_date_str=end_date_str,
