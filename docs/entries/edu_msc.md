@@ -1,7 +1,9 @@
 ---
 type: "education"
-name: "MSc Game and Media Technology"
-banner: "images/logo_utrecht-university.jpeg"
+degree: "MSc Game and Media Technology"
+organization: "Utrecht University"
+location: "Utrecht, NL"
+image: "/assets/images/logo_utrecht-university.jpeg"
 start_month: 9
 start_year: 2018
 end_month: 5

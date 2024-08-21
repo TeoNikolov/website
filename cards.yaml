@@ -1,0 +1,28 @@
+properties:
+  - common:
+    - image: false
+    - link: false
+    - type: true
+  - education:
+    - degree: true
+    - organization: true
+    - location: true
+    - project: false
+    - start_month: true
+    - start_year: true
+    - end_month: true
+    - end_year: true
+  - experience:
+    - role: true
+    - role_alt: false
+    - organization: true
+    - location: true
+    - start_month: true
+    - start_year: true
+    - end_month: false
+    - end_year: false
+    - ongoing: true
+  - project:
+    - name: true
+  - default:
+    - name: true
