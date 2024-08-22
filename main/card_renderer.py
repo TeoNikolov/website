@@ -27,9 +27,9 @@ class ErrorCardRenderer(CardRenderer):
 
 class EducationCardRenderer(CardRenderer):
     TEMPLATE = """\
-- ${image_html}
+- ${degree_html}
 \t
-\t **${degree}**
+${image_html}
 \t
 \t > ${start_month} ${start_year} - ${end_date_str}
 \t >
@@ -51,6 +51,12 @@ class EducationCardRenderer(CardRenderer):
 
         end_date_str = f"{end_month} {end_year}" if end_month and end_year else "Ongoing"
 
+        degree_html = f"""\
+\t<span style="display: flex; justify-content: center;"><i><b>{degree}</b></i></span>
+\t
+\t ---
+\t"""
+
         image_html = f"""\
 \t<span class='card_banner'><img src="{image}" alt="This is an automatically generated image."></span>
 \t
@@ -64,7 +70,7 @@ class EducationCardRenderer(CardRenderer):
 \t<strong>Project:</strong> {project}""" if project else ""
 
         result = self._render_template(
-            degree=degree,
+            degree_html=degree_html,
             organization=organization,
             location=location,
             start_month=start_month,
