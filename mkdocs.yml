@@ -4,7 +4,7 @@ site_url: https://www.teonikolov.com/
 # Repository
 repo_name: teonikolov/website
 repo_url: https://github.com/teonikolov/website
-edit_uri: ""
+edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -24,6 +24,8 @@ theme:
   features:
     - navigation.footer
     - navigation.tabs
+    - content.action.edit
+    - content.action.view
 extra_css:
   - stylesheets/extra.css
 plugins:
