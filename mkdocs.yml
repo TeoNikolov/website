@@ -30,9 +30,6 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to system preference
-
-
-
   features:
     - navigation.footer
     - navigation.tabs
