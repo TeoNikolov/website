@@ -78,51 +78,74 @@ class EducationCardRenderer(CardRenderer):
 
 class ExperienceCardRenderer(CardRenderer):
     TEMPLATE = """\
-- ${image_html}
+- ${project_html}
 \t
-\t ${start_month} ${start_year} - ${end_date_str}
-\t
-\t ---
+${image_html}
+${image_attribution_html}
 \t
 \t **${role}**
 \t
-\t ${organization} @ ${location}
+\t > ${start_month} ${start_year} ${end_date_str}
+\t >
+\t > ${organization} — ${location}
+\t
 \n"""
 
     def render(self, card_data: CardData) -> str:
+        image = card_data.get_value("image")
+        image_attribution = card_data.get_value("image_attribution")
+        link = card_data.get_value("link")
         role = card_data.get_value("role")
-        role_alt = card_data.get_value("role_alt")
         organization = card_data.get_value("organization")
         location = card_data.get_value("location")
+        project = card_data.get_value("project")
         start_month = calendar.month_abbr[int(card_data.get_value("start_month"))]
         start_year = card_data.get_value("start_year")
         end_month_value = card_data.get_value("end_month")
         end_month = calendar.month_abbr[int(end_month_value)] if end_month_value is not None else None
         end_year = card_data.get_value("end_year")
         ongoing = card_data.get_value("ongoing")
-        image = None
 
         if ongoing:
-            end_date_str = "Ongoing"
+            end_date_str = "— Ongoing"
         elif end_month and end_year:
-            end_date_str = f"{end_month} {end_year}"
+            end_date_str = f"— {end_month} {end_year}"
         else:
             end_date_str = ""
+
+        hyperlink_start = f"<a href=\"{link}\">" if link else ""
+        hyperlink_end = "</a>" if link else ""
 
         image_html = f"""\
 \t<span class='card_banner'><img src="{image}" alt="This is an automatically generated image."></span>
 \t
-\t ---
 \t""" if image else ""
+
+        image_attribution_html = f"""\
+\t
+\t> <i>{image_attribution}</i>
+\t
+\t ---
+""" if image_attribution else ""
+
+        project_html = f"""\
+\t<span style="display: flex; justify-content: center;"><i><b>{project}</b></i></span>
+\t
+\t ---
+\t""" if project else ""
 
         result = self._render_template(
             role=role,
             organization=organization,
             location=location,
+            project_html=project_html,
             start_month=start_month,
             start_year=start_year,
             end_date_str=end_date_str,
-            image_html=image_html
+            image_html=image_html,
+            image_attribution_html=image_attribution_html,
+            hyperlink_start=hyperlink_start,
+            hyperlink_end=hyperlink_end
         )
 
         return result

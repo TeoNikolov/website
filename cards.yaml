@@ -1,6 +1,7 @@
 properties:
   - common:
     - image: false
+    - image_attribution: false
     - link: false
     - type: true
   - education:
@@ -14,9 +15,9 @@ properties:
     - end_year: true
   - experience:
     - role: true
-    - role_alt: false
     - organization: true
     - location: true
+    - project: false
     - start_month: true
     - start_year: true
     - end_month: false

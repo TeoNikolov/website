@@ -1,7 +1,5 @@
 # Experience
 
-This site is a work-in-progress.
-
 ## Employment
 
 <div class="grid cards" markdown>
@@ -12,13 +10,32 @@ This site is a work-in-progress.
 
 ## Freelance
 
+### 2024
+
 <div class="grid cards" markdown>
+
+{{ grid_entry("docs/entries/exp_kth_genea-leaderboard.md") }}
+{{ grid_entry("docs/entries/exp_umea_wasp-ss-2024.md") }}
+{{ grid_entry("docs/entries/exp_motorica-freelance.md") }}
+
 </div>
 
-###
+### 2023
 
-- Motorica AB 04-2024 - Ongoing | Research Engineer
-- GENEA Challenge - 05-2022 - 12-2023 | Research Engineer
-- GENEA Leaderboard - 01-2024 - Ongoing | Research Engineer, Organizer
-- WASP Summer School - 05-2022 - Ongoing | Software Engineer, Organizer
-- Motorica AB - 10-2022 - 03-2024 | Unreal Engine Developer
+<div class="grid cards" markdown>
+
+{{ grid_entry("docs/entries/exp_kth_genea-challenge-2023.md") }}
+{{ grid_entry("docs/entries/exp_umea_wasp-ss-2023.md") }}
+{{ grid_entry("docs/entries/exp_motorica-freelance.md") }}
+
+</div>
+
+### 2022
+
+<div class="grid cards" markdown>
+
+{{ grid_entry("docs/entries/exp_kth_genea-challenge-2022.md") }}
+{{ grid_entry("docs/entries/exp_umea_wasp-ss-2022.md") }}
+{{ grid_entry("docs/entries/exp_motorica-freelance.md") }}
+
+</div>
