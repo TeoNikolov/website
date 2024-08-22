@@ -81,7 +81,6 @@ class ExperienceCardRenderer(CardRenderer):
 - ${project_html}
 \t
 ${image_html}
-${image_attribution_html}
 \t
 \t **${role}**
 \t
@@ -116,17 +115,17 @@ ${image_attribution_html}
         hyperlink_start = f"<a href=\"{link}\">" if link else ""
         hyperlink_end = "</a>" if link else ""
 
+        if image_attribution is None:
+            image_attribution = ""
+
+        image_attribution_html = f"> <i>{image_attribution}</i>" if image_attribution else ""
         image_html = f"""\
 \t<span class='card_banner'><img src="{image}" alt="This is an automatically generated image."></span>
 \t
+\t {image_attribution_html}
+\t
+\t---
 \t""" if image else ""
-
-        image_attribution_html = f"""\
-\t
-\t> <i>{image_attribution}</i>
-\t
-\t ---
-""" if image_attribution else ""
 
         project_html = f"""\
 \t<span style="display: flex; justify-content: center;"><i><b>{project}</b></i></span>
@@ -143,7 +142,6 @@ ${image_attribution_html}
             start_year=start_year,
             end_date_str=end_date_str,
             image_html=image_html,
-            image_attribution_html=image_attribution_html,
             hyperlink_start=hyperlink_start,
             hyperlink_end=hyperlink_end
         )
