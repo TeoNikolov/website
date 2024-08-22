@@ -1,6 +1,6 @@
 ---
 type: "experience"
-role: "Research Engineer | Organizer | Tutor"
+role: "Research Engineer — Organizer — Tutor"
 organization: "Umea University"
 location: "Norrkoping, Sweden"
 project: "WASP Summer School 2022"

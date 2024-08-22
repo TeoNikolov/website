@@ -4,6 +4,17 @@ import calendar
 import textwrap
 import inspect
 
+def get_image_html(image_path, image_credit):
+    image_credit_html = f"> Credit: <i>{image_credit}</i>" if image_credit else ""
+    image_html = f"""\
+\t<span class='card_banner'><img src="{image_path}" alt="This is an automatically generated image."></span>
+\t
+\t {image_credit_html}
+\t
+\t---
+\t""" if image_path else ""
+    return image_html
+
 # Base class
 class CardRenderer:
     TEMPLATE = ""
@@ -57,11 +68,7 @@ ${image_html}
 \t ---
 \t"""
 
-        image_html = f"""\
-\t<span class='card_banner'><img src="{image}" alt="This is an automatically generated image."></span>
-\t
-\t ---
-\t""" if image else ""
+        image_html = get_image_html(image, None)
 
         project_html = f"""\
 \t
@@ -84,11 +91,9 @@ ${image_html}
 
 class ExperienceCardRenderer(CardRenderer):
     TEMPLATE = """\
-- ${project_html}
+- ${header_html}
 \t
 ${image_html}
-\t
-\t **${role}**
 \t
 \t > ${start_month} ${start_year} ${end_date_str}
 \t >
@@ -118,32 +123,31 @@ ${image_html}
         else:
             end_date_str = ""
 
+        image_html = get_image_html(image, image_attribution)
+
+        role_html = f"""\
+\t<span style="display: flex; justify-content: center;"><i><b>{role}</b></i></span>
+\t"""
+
+        project_html = f"""\
+\t<span style="display: flex; justify-content: center;"><i>{project}</i></span>
+\t""" if project else ""
+        
+        header_html = f"""\
+{role_html}
+\t
+{project_html}
+\t
+\t ---
+"""
+
         hyperlink_start = f"<a href=\"{link}\">" if link else ""
         hyperlink_end = "</a>" if link else ""
 
-        if image_attribution is None:
-            image_attribution = ""
-
-        image_attribution_html = f"> <i>{image_attribution}</i>" if image_attribution else ""
-        image_html = f"""\
-\t<span class='card_banner'><img src="{image}" alt="This is an automatically generated image."></span>
-\t
-\t {image_attribution_html}
-\t
-\t---
-\t""" if image else ""
-
-        project_html = f"""\
-\t<span style="display: flex; justify-content: center;"><i><b>{project}</b></i></span>
-\t
-\t ---
-\t""" if project else ""
-
         result = self._render_template(
-            role=role,
+            header_html=header_html,
             organization=organization,
             location=location,
-            project_html=project_html,
             start_month=start_month,
             start_year=start_year,
             end_date_str=end_date_str,

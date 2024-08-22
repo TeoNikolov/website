@@ -1,7 +1,7 @@
 ---
 type: "experience"
 image: "/assets/images/logo_genea-leaderboard.png"
-role: "Research Engineer | Organizer"
+role: "Research Engineer — Organizer"
 organization: "KTH"
 location: "Remote"
 project: "GENEA Leaderboard"
