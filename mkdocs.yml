@@ -9,18 +9,30 @@ edit_uri: edit/main/docs/
 theme:
   name: material
   palette:
-    - scheme: slate
-      primary: deep purple
-      accent: deep purple
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/toggle-switch
+        icon: material/circle-half-full
         name: Switch to light mode
-    - scheme: default
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
       primary: indigo
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to system preference
+
+
+
   features:
     - navigation.footer
     - navigation.tabs
