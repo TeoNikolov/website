@@ -95,10 +95,6 @@ class ExperienceCardRenderer(CardRenderer):
 \t
 ${image_html}
 \t
-\t > ${start_month} ${start_year} ${end_date_str}
-\t >
-\t > ${organization} — ${location}
-\t
 \n"""
 
     def render(self, card_data: CardData) -> str:
@@ -125,6 +121,10 @@ ${image_html}
 
         image_html = get_image_html(image, image_attribution)
 
+        date_html = f"""\
+\t<span style="display: flex; justify-content: center;"><i>{start_month} {start_year} {end_date_str}</i></span>
+\t"""
+
         role_html = f"""\
 \t<span style="display: flex; justify-content: center;"><i><b>{role}</b></i></span>
 \t"""
@@ -132,11 +132,22 @@ ${image_html}
         project_html = f"""\
 \t<span style="display: flex; justify-content: center;"><i>{project}</i></span>
 \t""" if project else ""
-        
+
+        organization_html = f"""\
+\t<span style="display: flex; justify-content: center;"><i>{organization}</i></span>
+\t"""
+
         header_html = f"""\
+{date_html}
+\t
+\t ---
+\t
 {role_html}
 \t
+{organization_html}
+\t
 {project_html}
+\t
 \t
 \t ---
 """
@@ -146,11 +157,6 @@ ${image_html}
 
         result = self._render_template(
             header_html=header_html,
-            organization=organization,
-            location=location,
-            start_month=start_month,
-            start_year=start_year,
-            end_date_str=end_date_str,
             image_html=image_html,
             hyperlink_start=hyperlink_start,
             hyperlink_end=hyperlink_end
