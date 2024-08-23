@@ -129,12 +129,10 @@ ${image_html}
 \t<span style="display: flex; justify-content: center;"><i><b>{role}</b></i></span>
 \t"""
 
-        project_html = f"""\
-\t<span style="display: flex; justify-content: center;"><i>{project}</i></span>
-\t""" if project else ""
+        project_html = f"— {project}" if project else ""
 
         organization_html = f"""\
-\t<span style="display: flex; justify-content: center;"><i>{organization}</i></span>
+\t<span style="display: flex; justify-content: center;"><i>{organization} {project_html}</i></span>
 \t"""
 
         header_html = f"""\
@@ -145,8 +143,6 @@ ${image_html}
 {role_html}
 \t
 {organization_html}
-\t
-{project_html}
 \t
 \t
 \t ---
