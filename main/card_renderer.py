@@ -4,14 +4,15 @@ import calendar
 import textwrap
 import inspect
 
-def get_image_html(image_path, image_credit):
+def get_image_html(image_path, image_credit, bottom_line):
     image_credit_html = f"> Credit: <i>{image_credit}</i>" if image_credit else ""
+    bottom_line_html = "---" if bottom_line else ""
     image_html = f"""\
 \t<span class='card_banner'><img src="{image_path}" alt="This is an automatically generated image."></span>
 \t
 \t {image_credit_html}
 \t
-\t---
+\t {bottom_line_html}
 \t""" if image_path else ""
     return image_html
 
@@ -68,7 +69,7 @@ ${image_html}
 \t ---
 \t"""
 
-        image_html = get_image_html(image, None)
+        image_html = get_image_html(image, None, True)
 
         project_html = f"""\
 \t
@@ -119,7 +120,7 @@ ${image_html}
         else:
             end_date_str = ""
 
-        image_html = get_image_html(image, image_attribution)
+        image_html = get_image_html(image, image_attribution, False)
 
         date_html = f"""\
 \t<span style="display: flex; justify-content: center;"><i>{start_month} {start_year} {end_date_str}</i></span>
@@ -143,7 +144,6 @@ ${image_html}
 {role_html}
 \t
 {organization_html}
-\t
 \t
 \t ---
 """
